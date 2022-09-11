@@ -8,7 +8,8 @@ it('kartička má mesiac textom Mar', () => {
 
   cy.get('[data-cy=due-date]')
     .eq(0)
-    .should('eq', 'Mar')
+    .invoke('text')
+    .should('eq', 'Mar 01 2022')
 
 });
 
@@ -20,6 +21,7 @@ it('anonymizácia dát v kartičkách', () => {
   cy.visit('/board/123456789')
 
   cy.get('[data-cy=card-text], [data-cy=due-date]')
+    .invoke('text', '***')
 
   cy.screenshot()
 
@@ -33,6 +35,7 @@ it('zobrazenie skrytých ikoniek', () => {
   cy.visit('/board/123456789')
 
   cy.get('[data-cy=card-edit]')
+    .invoke('show')
     
   cy.screenshot()
   
@@ -44,17 +47,20 @@ it('premenovanie boardu', () => {
   cy.visit('/board/123456789')
 
   cy.get('[data-cy=board-title]')
+    .invoke('val', 'smallname')
   
 });
 
 
 // #5: vyskúšaj si upload súboru pomocou .selectFile() príkazu
 // súbor nahraj do dropzóny
-it('upload súboru', () => {
+it.only('upload súboru', () => {
 
   cy.visit('/board/123456789?card=77958252506')
 
-  cy.get('[data-cy="upload-image"]')
+  cy.get('[type="file"]')
+    .invoke('show')
+    .selectFile('cypress/fixtures/cypress_logo.png')
 
 })
 
