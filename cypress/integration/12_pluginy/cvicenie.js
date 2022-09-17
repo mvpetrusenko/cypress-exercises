@@ -7,5 +7,10 @@
 it('bookmarknutie boardu', () => {
 
   cy.visit('/')
+
+  cy.request('POST', '/api/boards', {name: 'boardForHover'})
+
+  cy.get('[data-cy="board-item"]').realHover()
+  cy.get('.star').realClick()
     
 });

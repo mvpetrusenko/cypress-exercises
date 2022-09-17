@@ -1,0 +1,125 @@
+{
+  "boards": [
+    {
+      "name": "new board ",
+      "user": 0,
+      "starred": false,
+      "created": "2022-09-17",
+      "id": 1
+    },
+    {
+      "name": "new board ",
+      "user": 0,
+      "starred": false,
+      "created": "2022-09-17",
+      "id": 2
+    },
+    {
+      "name": "new board ",
+      "user": 0,
+      "starred": false,
+      "created": "2022-09-17",
+      "id": 3
+    },
+    {
+      "name": "new board ",
+      "user": 0,
+      "starred": false,
+      "created": "2022-09-17",
+      "id": 4
+    },
+    {
+      "name": "new board ",
+      "user": 0,
+      "starred": false,
+      "created": "2022-09-17",
+      "id": 5
+    },
+    {
+      "name": "new board ",
+      "user": 0,
+      "starred": false,
+      "created": "2022-09-17",
+      "id": 6
+    },
+    {
+      "name": "new board ",
+      "user": 0,
+      "starred": false,
+      "created": "2022-09-17",
+      "id": 7
+    },
+    {
+      "name": "new board ",
+      "user": 0,
+      "starred": false,
+      "created": "2022-09-17",
+      "id": 8
+    },
+    {
+      "name": "new board ",
+      "user": 0,
+      "starred": false,
+      "created": "2022-09-17",
+      "id": 9
+    }
+  ],
+  "cards": [],
+  "lists": [
+    {
+      "name": "new list",
+      "boardId": 1,
+      "created": "2022-09-17",
+      "id": 1
+    },
+    {
+      "name": "new list",
+      "boardId": 2,
+      "created": "2022-09-17",
+      "id": 2
+    },
+    {
+      "name": "new list",
+      "boardId": 3,
+      "created": "2022-09-17",
+      "id": 3
+    },
+    {
+      "name": "new list",
+      "boardId": 4,
+      "created": "2022-09-17",
+      "id": 4
+    },
+    {
+      "name": "new list",
+      "boardId": 5,
+      "created": "2022-09-17",
+      "id": 5
+    },
+    {
+      "name": "new list",
+      "boardId": 6,
+      "created": "2022-09-17",
+      "id": 6
+    },
+    {
+      "name": "new list",
+      "boardId": 7,
+      "created": "2022-09-17",
+      "id": 7
+    },
+    {
+      "name": "new list",
+      "boardId": 8,
+      "created": "2022-09-17",
+      "id": 8
+    },
+    {
+      "name": "new list",
+      "boardId": 9,
+      "created": "2022-09-17",
+      "id": 9
+    }
+  ],
+  "users": []
+}

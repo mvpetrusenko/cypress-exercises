@@ -4,6 +4,8 @@
 // alebo si vytvor vlastný fixture súbor
 it('zoznam dvoch boardov z fixture', () => {
 
+  cy.intercept('GET', '/api/boards', {fixture: 'twoBoards'})
+
   cy
     .visit('/');
 
@@ -16,6 +18,8 @@ it('zoznam dvoch boardov z fixture', () => {
 // použitia fixture ju skús nahradiť pomocou atribútu body
 it('žiaden board v zozname', () => {
 
+  cy.intercept('GET', '/api/boards', [])
+
   cy
     .visit('/');
 
@@ -26,7 +30,9 @@ it('žiaden board v zozname', () => {
 
 // úloha #3: pridaj do príkazu .intercept() atribút, pomocou 
 // ktorého vyvoláš chybu pri vytvorení boardu
-it('chyba pri vytvorení boardu', () => {
+it.only('chyba pri vytvorení boardu', () => {
+
+  cy.intercept('POST', '/api/boards', {forceNetworkError: true})
 
   cy.visit('/');
 
@@ -50,6 +56,8 @@ it.only('dynamická zmena názvov boardov', () => {
       url: '/api/boards'
     }, (req) => {
       req.reply(res => {
+
+         res.statusCode = 400
 
       })
     }).as('boards')

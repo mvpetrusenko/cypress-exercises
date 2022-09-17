@@ -1,5 +1,8 @@
 /// <reference types="cypress" />
 
+import {board} from '../../support/pageObjects/board'
+import {card} from '../../support/pageObjects/board'
+
 beforeEach( () => {
 
   cy.request('POST', '/api/boards', { name: 'new board '})
@@ -16,5 +19,9 @@ beforeEach( () => {
 it('vytvorenie, odškrtnutie a otvorenie karty', function() {
 
   cy.visit(`/board/${this.boardId}`)
+
+  card.creation()
+      .check()
+      .openDetail()
   
 });
